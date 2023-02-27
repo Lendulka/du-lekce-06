@@ -6,7 +6,7 @@ const parseDate = (date) => {
     return dateObject = {
         day: Number(date.slice(0, 2)),
         month: Number(date.slice(3, 5)),
-        year: date.slice(6)
+        year: Number(date.slice(6))
     }
 }
 
@@ -22,20 +22,11 @@ document.querySelector('.date').innerHTML =
 
 const formatDate = ({ day: x, month: y, year: z }) => {
     let dateObject2 = { day: x, month: y, year: z }
-    let values = Object.values(dateObject2)
-
-    if (String(values[0]).length === 1 || String(values[1]).length === 1) {
-        dayResult = String(values[0]).padStart(2, '0')
-        monthResult = String(values[1]).padStart(2, '0')
-    } else {
-        dayResult = String(values[0])
-        monthResult = String(values[1])
-    }
-    yearResult = String(values[2])
-    document.querySelector('.formatDate').innerHTML = `<p>${dayResult}.${monthResult}.${yearResult}</p>`
+    let { day, month, year } = dateObject2
+    return (String(day).padStart(2, '0') + '.' + String(month).padStart(2, '0') + '.' + String(year))
 }
 
-formatDate({ day: 2, month: 12, year: 2015 })
+document.querySelector('.formatDate').innerHTML = formatDate({ day: 13, month: 7, year: 1938 })
 
 
 // Python zaokrouhlování
@@ -74,7 +65,7 @@ const maximum = (a, b, c) => {
     }
 }
 
-console.log(maximum(30, 65, 15))
+console.log(maximum(20, 50, 30))
 
 
 
