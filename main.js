@@ -14,6 +14,8 @@ let { day, month, year } = dateObject
 
 parseDate('03.02.1974')
 
+console.log(dateObject)
+
 document.querySelector('.date').innerHTML =
     `<p>day: ${dateObject.day}, month: ${dateObject.month}, year: ${dateObject.year}</p>`
 
@@ -31,6 +33,13 @@ document.querySelector('.formatDate').innerHTML = formatDate({ day: 13, month: 7
 
 // Python zaokrouhlování
 
+let decNumber = prompt('Zadej desetinné číslo')
+
+while (validator.isDecimal(decNumber, { decimal_digits: '1.' })) {
+    alert('Číslo musí být desetinné')
+    decNumber = prompt('Zadej znovu desetinné číslo')
+}
+
 const rounding = (decNumber) => {
     let integer = Math.trunc(decNumber)
     let fraction = Math.abs((decNumber - (integer)))
@@ -42,12 +51,11 @@ const rounding = (decNumber) => {
         } else {
             return Math.ceil(decNumber)
         }
-    } else {
-        return Math.round(decNumber)
     }
+    return Math.round(decNumber)
 }
 
-console.log(rounding(-11.5))
+console.log(rounding(Number(decNumber)))
 
 
 // maximum ze tří čísel
@@ -65,7 +73,7 @@ const maximum = (a, b, c) => {
     }
 }
 
-console.log(maximum(20, 50, 30))
+console.log(maximum(105, 50, 65))
 
 
 
