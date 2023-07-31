@@ -5,19 +5,18 @@
 
 Bez použití knihovny dayjs napište funkci parseDate, která na vstupu obdrží řetězec obsahující datum ve formátu DD.MM.YYYY a vrátí objekt s jednotlivýnu částmi zadaného data. Příklad použití:
 
-> parseDate('12.03.2015')
-{ day: 12, month: 3, year: 2015 }
-> parseDate('06.04.2021')
+> parseDate('12.03.2015') </br>
+{ day: 12, month: 3, year: 2015 } </br>
+> parseDate('06.04.2021') </br>
 { day: 6, month: 4, year: 2021 }
 
 <strong>Úkol č. 2: Formátování data</strong>
 
 Bez použití knihovny dayjs napište funkci formatDate, která na vstupu obdrží objekt představující datum v následujícím formátu:
-
 { day: 12, month: 3, year: 2015 }
-Funkce vrátí řetězec představující datum ve formátu DD.MM.YYYY. Příklad použití:
 
-> formatDate({ day: 6, month: 4, year: 2021 })
+Funkce vrátí řetězec představující datum ve formátu DD.MM.YYYY. Příklad použití:
+> formatDate({ day: 6, month: 4, year: 2021 }) </br>
 "06.04.2021"
 
 V tomto cvičení se vám jistě bude hodit metoda padStart. Zkuste také uvnitř těla funkce použít destrukturování.
