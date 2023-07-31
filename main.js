@@ -1,4 +1,4 @@
-// parsování data
+// PARSOVÁNÍ DATA
 
 let dateObject = ''
 
@@ -20,7 +20,7 @@ document.querySelector('.date').innerHTML =
     `<p>day: ${dateObject.day}, month: ${dateObject.month}, year: ${dateObject.year}</p>`
 
 
-// formátování data
+// FORMÁTOVÁNÍ DATA
 
 const formatDate = ({ day: x, month: y, year: z }) => {
     let dateObject2 = { day: x, month: y, year: z }
@@ -28,10 +28,10 @@ const formatDate = ({ day: x, month: y, year: z }) => {
     return (String(day).padStart(2, '0') + '.' + String(month).padStart(2, '0') + '.' + String(year))
 }
 
-document.querySelector('.formatDate').innerHTML = formatDate({ day: 13, month: 7, year: 1938 })
+document.querySelector('.formatDate').innerHTML = formatDate({ day: 3, month: 2, year: 1974 })
 
 
-// Python zaokrouhlování
+// PYTHON ZAOKROUHLOVÁNÍ
 
 let decNumber = prompt('Zadej desetinné číslo')
 
@@ -58,7 +58,7 @@ const rounding = (decNumber) => {
 console.log(rounding(Number(decNumber)))
 
 
-// maximum ze tří čísel
+// MAXIMUM ZE TŘÍ ČÍSEL
 
 const maximum = (a, b, c) => {
     if ((a > b) && (a > c)) {
@@ -73,8 +73,7 @@ const maximum = (a, b, c) => {
     }
 }
 
-console.log(maximum(105, 50, 65))
-
+console.log(maximum(105, 201, 65))
 
 
 
